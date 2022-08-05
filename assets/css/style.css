@@ -1,3 +1,5 @@
+@import url('media.css');
+
 *{
     margin:0;
     padding:0;
@@ -8,6 +10,7 @@
 
 .container{
     display:flex;
+    width:100%;
     max-width:1200px;
     margin:auto;
     padding:0 2%;
@@ -21,7 +24,7 @@ header{
     z-index:2;
     width:100%;
     max-height:90px;
-    padding:15px;
+    padding:15px ;
     background-color:rgba(10, 221, 240, 0.3);
 }
 header > .container{
@@ -52,15 +55,31 @@ header li a{
     color:#555;
     padding:0 15px;
     font-size:17px;
+    transition:all 0.4s;
 }
+li.image{
+    display:none;
+    width:100%;
+    height:100%;
+    max-height:200px;
+    margin-top:30px;
+    color:#333;
+}
+li.image img{
+    width:100%;
+    height:100%;
+}
+
+
 header li a:hover{
     text-shadow:0 0 12px #333;
     text-decoration:underline;
 }
 .menu{
-    font-size:35px;
+    font-size:30px;
     position:absolute;
     right:10px;
+    top:35px;
     color:#666;
     display:none;
 }
@@ -68,48 +87,39 @@ header li a:hover{
 /* ==== section-banner-text ===== */
 section.banner{
     width:100%;
-    height:100vh;
+    height:700px;
     background-image:url('../images/background_01.jpg');
     background-repeat:no-repeat;
-    background-size:100% ;
+    background-size:cover ;
     background-position:center; 
     background-attachment: fixed;
-    display:flex;
-    justify-content: end;
-    flex-direction:column;
-    
+    position:relative;    
 }
-.banner-text{
-    display:flex;
-   align-items: flex-end;
-    
+section.banner >.container{
+    flex-direction:column;
+    position:absolute;
+    bottom:0; 
 }
 
 
 .banner-titulo{
     display:flex;
-    width:45%;
-    align-items:center;
+    justify-content: space-between;
+    margin-bottom:60px;
+    
 }
 .banner-titulo h2{
     font-size:55px;
+    max-width:600px;
     color:#fff;
+    text-shadow:1px 1px 0 #ddd;
     font-family:Helvetica,serif;
-}
-.banner-info{
-    flex:1;
-    display:flex;
-    flex-direction: column;
-    gap:82px;
-    height:inherit;
-   
 }
 
 .banner-modal{
     display:flex;
-    justify-content:flex-end;
     align-items:center;
-    flex:1;
+   
 }
 .banner-modal-single{
     padding:10px;
@@ -126,11 +136,13 @@ section.banner{
     width:100%;
     max-width:500px;
     flex-direction:column;
-   color:#555;
-   border:1px solid #ccc;
-   border-bottom:none;
-   padding:20px;
-   background-color:rgba(10, 221, 240, 0.5)
+    color:#555;
+    border:3px solid #028995;
+    border-bottom:none;
+    padding:20px;
+    margin:auto;
+    background-color:rgba(10, 221, 240, 0.5);
+
 }
 .banner-lazer h3{
   color:#333;
@@ -144,5 +156,59 @@ section.banner{
     display:flex; 
     justify-content:space-between;
      
+}
+.modal-fato{
+    display:none;
+    opacity:0;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    background-color:#444;
+    max-width:300px;
+    padding:5px;
+    border:1px solid #fff;
+    box-shadow:-0 0 5px #000 ;
+    transition:all ease 0.4s;
+}
+.modal-fato-box{
+    background-color: #04ccde;
+    padding:15px;
+    color:#444;
+    font-size:15px;
+    line-height:20px;
+    text-shadow:1px 1px 0 #999;
+}
+.modal-fato-box h3{
+   color:#333;
+   text-align:center;
+   font-size:25px;
+   margin-bottom:20px;
+}
+/* ==== atracoes === */
+section.atracoes{
+    padding: 0 2%;
+}
+section.atracoes > .container{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    padding:20px 0;
+    background-color:#04ccde;
+    border-bottom:2px solid #028995;
+
+}
+section.atracoes .atracoes-box{
+    color:#028995;
+    text-align:center;
+    font-size:60px;
+    padding:5px;
+    border-left:2px solid #028995;
+}
+section.atracoes .atracoes-box:nth-of-type(1){
+    border-left:0;
+}
+.atracoes-box h3{
+    font-size:18px;
+    margin-bottom:20px;
 }
 
