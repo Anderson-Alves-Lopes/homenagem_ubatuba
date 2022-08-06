@@ -19,4 +19,25 @@ menu.addEventListener('click',function(){
     }
  
  });
+ // Abrir e fechar o modal
+
+ const openModal = document.querySelector('.template-button');
+ const closeModal = document.querySelector('.modal span');
+
+ openModal.addEventListener('click',function(){
+  let modal = document.querySelector('.modal');
+    modal.style.display = 'block';
+    setTimeout(function(){
+      modal.style.opacity = '1';
+    },200)
+
+ });
+ closeModal.addEventListener('click',function(){
+  let modal = document.querySelector('.modal');
+  modal.style.opacity = '0'
+  setTimeout(function(){
+    modal.style.display = 'none';
+  },200)
+
+ });
 

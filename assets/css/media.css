@@ -6,7 +6,7 @@
     --btn--black:#222;
     --text-shadow-light: 1px 1px 2px #333;
     --text-shadow-large:0 0 5px #111;
-    --btn-color-aqua:#82d0e0;
+    --btn-color-aqua:#82d0f9;
 }
 
 
@@ -14,7 +14,7 @@
 @media screen and (max-width:700px){
 
     header ul{
-        background-color: var(--rgba-blue) ;
+        background-color: var(--btn-color-aqua) ;
         position:absolute;
         right:0;
         top:72px;
@@ -24,7 +24,7 @@
         align-items:center;
         display:none;
         opacity:0;
-        z-index:3;
+        z-index:20;
         transition:all ease 0.4s;
 
     }
@@ -33,4 +33,31 @@
     }
     .menu{display:block;}
     .menu-image{display:block;}
+    .one {
+        font-size:45px;
+    }
+}
+
+@media screen and (max-width:450px){
+    header > .container{
+        justify-content:flex-start;
+    }    
+    header img{
+        margin-right:10px;
+        width:50px;
+    }
+    section.template > .container{
+        grid-template-areas:
+          "one one "
+          " two two"
+          "three three "
+        ;
+    }
+    .one {
+        font-size:40px;
+    }
+    .two .template-button{
+        padding:7px;
+        font-size:13px;
+    }
 }

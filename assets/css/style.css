@@ -31,6 +31,34 @@
 .menu-image img{
     width:90%;
 }
+.modal{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%, -50%);
+    max-width:400px;
+    background-color:#222;
+    padding:20px;
+    border:2px solid #fff;
+    color:#cacaca;
+    font-size:16px;
+    display:none;
+    opacity:0;
+    z-index:99;
+    transition:all 0.4s;
+}
+.modal h2{
+    text-align:center;
+    font-size:24px;
+    margin-bottom:10px;
+}
+.modal span{
+    position:absolute;
+    right:5px;
+    bottom:5px;
+    background-color:#ccc;
+    cursor:pointer;
+}
 
 :root {
     --rgba-blue :rgba(3, 248, 252,0.3);
@@ -40,7 +68,7 @@
     --btn--black:#222;
     --text-shadow-light: 1px 1px 2px #333;
     --text-shadow-large:0 0 5px #111;
-    --btn-color-aqua:#03e3fc;
+    --btn-color-aqua:#82d0f9;
     --btn-color-blue-dark:#04acbf;
 }
 
@@ -48,7 +76,7 @@
 
 main{
     width:100%;
-    max-height:100vh;
+    min-height:100vh;
     background-image:url('../images/background_01.jpg');
     background-size:cover;
     background-position:center;
@@ -110,6 +138,8 @@ section.template{
     padding:20px 0;
 }
 section.template > .container{
+    position:relative;
+    z-index:1;
     display:grid;
     grid-template-areas:
       "one one two two"
@@ -122,6 +152,7 @@ section.template > .container{
 .one{
     grid-area:one;
     font-size:55px;
+    color:var(--btn-gray-dark);
 }
 .two{
     grid-area:two;
@@ -142,11 +173,23 @@ section.template > .container{
 }
 .three{
     grid-area:three;
-    max-width:500px;
+    max-width:550px;
+    width:100%;
     padding:20px;
     border:2px solid var(--btn-color-blue-dark);
     background-color: var(--rgba-blue);
     border-bottom:none;
     position:relative;
     top:21px;
+}
+.three h3{
+    color:var(--btn-gray-dark);
+    font-size:26px;
+    text-align:center;
+}
+.three p{
+    color:var(--btn-gray);
+    font-size:15px;
+    margin-top:15px;
+    line-height:21px;
 }
