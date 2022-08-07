@@ -37,10 +37,10 @@
     top:50%;
     transform:translate(-50%, -50%);
     max-width:400px;
-    background-color:#222;
+    background-color:#6696d4;
     padding:20px;
     border:2px solid #fff;
-    color:#cacaca;
+    color:var(--btn-gray);
     font-size:16px;
     display:none;
     opacity:0;
@@ -192,4 +192,34 @@ section.template > .container{
     font-size:15px;
     margin-top:15px;
     line-height:21px;
+}
+
+/* ==== section-opcoes-lazer ==== */
+section.opcoes-lazer{
+    border-top:2px solid #314661;
+    border-bottom:2px solid #314661;
+    background-color:#6696d4;
+}
+
+section.opcoes-lazer .container{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    padding:15px 2%;
+    
+}
+.opcoes-lazer--box{
+    color:#314661;
+    text-align:center;
+    padding:10px;
+    font-size:40px;
+    border-left:2px solid #314661;
+    background-image:linear-gradient(-45deg ,#fff 3%, #6696d4 60% ,#fff );
+}
+.opcoes-lazer--box:nth-of-type(6){
+    border-right:2px solid #314661;
+}
+.opcoes-lazer--box h4{
+    font-size:17px;
+    line-height:23px;
+    margin-bottom:15px;
 }
