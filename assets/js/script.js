@@ -42,4 +42,7 @@ menu.addEventListener('click',function(){
   },200)
 
  });
+ //galeria de imagems
+
+ 
 

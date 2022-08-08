@@ -8,7 +8,11 @@
     --text-shadow-large:0 0 5px #111;
     --btn-color-aqua:#82d0f9;
 }
-
+@media screen and (max-width:850px){
+    .galeria-img {
+        grid-template-columns:repeat(3,1fr);
+    }
+}
 
 
 @media screen and (max-width:700px){
@@ -47,6 +51,15 @@
         border-right:2px solid #314661;
     }  
 }
+@media screen and (max-width:600px){
+    .galeria-img {
+        grid-template-columns:repeat(2,1fr);
+    }
+    .galeria-box{
+        padding:15px;
+        font-size:12px;
+    }
+}
 
 @media screen and (max-width:450px){
     header > .container{
@@ -80,4 +93,8 @@
     .opcoes-lazer--box:nth-of-type(4){
         border-right:2px solid #314661;
     }   
+   
+    .galeria-img img{
+        max-height:100px;
+    }
 }
