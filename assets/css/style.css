@@ -241,6 +241,10 @@ section.galeria > .container{
    font-size:30px;
    color:var(--btn-gray);
    margin:15px 0;
+  line-height:33px;
+}
+.galeria-info h2 strong{
+    color:var(--btn--black);
 }
 .galeria-img {
     display:grid;
@@ -263,6 +267,11 @@ section.galeria > .container{
     height:100%; 
     
 }
+.galeria-selecao{
+   display:flex;
+   justify-content:space-around;
+   padding:20px 0;
+}
 /* ==== section-slider === */
 section.slider{
     background-color:var(--btn-color-blue-dark);
@@ -277,16 +286,16 @@ section.slider > .container{
 
 .slider-box{
     width:100%;
+    height:auto;
     display:none;
     align-items: center;
     justify-content: center;
     margin:auto;
     animation-name: images;
     animation-duration: 2s;
-    transition:all 0.5s;
 }
 @keyframes images {
-    from {opacity: 0.2}
+    from {opacity: 0.4}
     to {opacity: 0.6} 
     to {opacity: 1}
   }
@@ -294,7 +303,7 @@ section.slider > .container{
 .slider-box img{
    width:inherit;
    max-height:400px;
-   min-height:100%;
+   
    
 }
 .slider-box .slider-text{
