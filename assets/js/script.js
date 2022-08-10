@@ -6,18 +6,12 @@ const menu = document.querySelector('.menu');
 menu.addEventListener('click',function(){
     let ul = document.querySelector('header ul');
  
-    if(ul.style.display === 'flex'){
-      ul.style.opacity = '0';
-       setTimeout(function(){
-        ul.style.display = 'none';
-         
-       },300)
-    }else if(ul.style.display = 'none'){
-      ul.style.display = 'flex';
-     setTimeout(function(){
-       ul.style.opacity = '1';
-         
-     },300)
+    if(ul.style.width === '150px'){
+       ul.style.width = '0';
+       
+    }else {
+      ul.style.width = '150px';
+     
     }
  
  });
@@ -42,7 +36,23 @@ menu.addEventListener('click',function(){
   },200)
 
  });
- //galeria de imagems
+ //slider
+ let sliderIndex = 0;
+ showSlider();
 
+ function showSlider(){
+  let slider = document.querySelectorAll('.slider-box');
+  for ( let i = 0; i < slider.length; i++){
+    slider[i].style.display = 'none';
+  }  
+  sliderIndex++;
+  
+  if(sliderIndex > slider.length){
+    sliderIndex = 1;
+  }
+  slider[sliderIndex -1].style.display = 'block';
+
+  setTimeout(showSlider, 5000);
+ }
  
 
