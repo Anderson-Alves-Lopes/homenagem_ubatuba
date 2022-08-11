@@ -87,8 +87,6 @@ html{
     --btn-gray :#555;
     --btn-gray-dark:#333;
     --btn--black:#222;
-    --text-shadow-light: 1px 1px 2px #333;
-    --text-shadow-large:0 0 5px #111;
     --btn-color-aqua:rgb(3, 248, 252);
     --btn-color-blue-dark:#04acbf;
 }
@@ -98,6 +96,7 @@ html{
 main{
     width:100%;
     min-height:100vh;
+    height:100%;
     background-image:url('../images/background_01.jpg');
     background-size:cover;
     background-position:center;
@@ -339,4 +338,51 @@ section.slider > .container{
    color:var(--btn--black);
    border-radius:3px;
    z-index:20;
+}
+/* ====== section-eco-turismo ====== */
+section.eco-turismo {
+    margin:50px 0;
+}
+section.eco-turismo p{
+    margin:15px 0;
+    font-size:16px;
+    color:var(--btn-gray)
+}
+section.eco-turismo h2,
+section.eco-turismo h3{
+   text-align:center;
+   font-size:25px;
+   color:var(--btn-gray-dark);
+}
+section.eco-turismo > .container{
+    flex-direction:column;
+}
+.eco-info{
+   padding:20px 0;
+}
+section.eco-turismo .eco-atividades{
+    display:flex;
+    background-color:#eee;
+    margin:10px 0;
+}
+section.eco-turismo .reverse{
+    flex-direction:row-reverse;
+    background-color:var( --btn-color-aqua);
+}
+.eco-img{
+    flex:1;
+    padding:30px;
+}
+.eco-img img{
+    width:100%;
+    max-height:250px;
+    min-height:150px;
+}
+.eco-text{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding:0 10px;
 }

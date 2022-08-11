@@ -64,6 +64,9 @@
     .modal{
         min-width:80%;
     }
+    section.eco-turismo .eco-atividades{
+        flex-direction:column;
+    }
 }
 
 @media screen and (max-width:450px){
