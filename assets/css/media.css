@@ -49,6 +49,9 @@
         max-height:300px;
         min-height:200px;
     }
+    .modal{
+        min-width:60%;
+    }
 }
 @media screen and (max-width:600px){
     .galeria-img {
@@ -57,6 +60,9 @@
     .galeria-box{
         padding:15px;
         font-size:12px;
+    }
+    .modal{
+        min-width:80%;
     }
 }
 
@@ -100,5 +106,10 @@
         font-size:20px;
         bottom:40px;
     }
+    .galeria-selecao{
+        flex-direction: column;
+        padding:5%;
+    }
+    
    
 }
