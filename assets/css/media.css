@@ -67,6 +67,9 @@
     section.eco-turismo .eco-atividades{
         flex-direction:column;
     }
+    .localizacao-box{
+        height:50vh;
+    }
 }
 
 @media screen and (max-width:450px){
