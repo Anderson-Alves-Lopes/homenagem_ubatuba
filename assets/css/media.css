@@ -3,6 +3,10 @@
     .galeria-img {
         grid-template-columns:repeat(3,1fr);
     }
+    section.comercio > .container,
+    section.comercio.hoteis > .container{
+        grid-template-columns:repeat(2,1fr);
+      }
 }
 
 
@@ -47,11 +51,22 @@
    
     .slider-box img{
         max-height:300px;
-        min-height:200px;
+        min-height:300px;
     }
     .modal{
         min-width:60%;
     }
+   
+    
+    .localizacao-form {
+        width: 95%;
+      }
+      .localizacao-form label {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        font-size: 16px;
+      }
 }
 @media screen and (max-width:600px){
     .galeria-img {
@@ -67,9 +82,10 @@
     section.eco-turismo .eco-atividades{
         flex-direction:column;
     }
-    .localizacao-box{
-        height:50vh;
-    }
+    section.comercio.hoteis > .container{
+        grid-template-columns:450px;
+        justify-content:center;
+      }
 }
 
 @media screen and (max-width:450px){
@@ -116,6 +132,16 @@
         flex-direction: column;
         padding:5%;
     }
-    
+    section.comercio > .container,
+    section.comercio.hoteis > .container{
+        grid-template-columns:300px;
+        justify-content:center;
+      }
+      section.comercio h2{
+          font-size:20px;
+      }
+      section.comercio h4{
+          font-size: 16px;
+      }
    
 }
