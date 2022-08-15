@@ -64,6 +64,7 @@ html {
 .button-box {
   padding: 20px 2%;
   text-align: center;
+  margin:40px 0;
 }
 .button-box a {
   text-decoration: none;
@@ -126,6 +127,7 @@ header {
 header > .container {
   justify-content: space-between;
   align-items: center;
+  
 }
 header h1 {
   font-size: 45px;
@@ -244,6 +246,7 @@ section.opcoes-lazer .container {
 
 section.galeria > .container {
   flex-direction: column;
+  padding: 30px 2%;
 }
 .galeria-info {
   font-size: 17px;

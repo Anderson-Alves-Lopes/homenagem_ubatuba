@@ -2,18 +2,24 @@
 // Menu mobile
 
 const menu = document.querySelector('.menu');
+function autoRefresh(){
+  window.location.reload() = window.location.href;
+}
+
 
 menu.addEventListener('click',function(){
     let ul = document.querySelector('header ul');
  
     if(ul.style.width === '150px'){
        ul.style.width = '0';
-       
+       setInterval('autoRefresh()',1000);
+      
     }else {
       ul.style.width = '150px';
+      
      
     }
- 
+    
  });
  // Abrir e fechar o modal
 
@@ -52,7 +58,7 @@ menu.addEventListener('click',function(){
   }
   slider[sliderIndex -1].style.display = 'block';
 
-  setTimeout(showSlider, 5000);
+  setTimeout(showSlider, 4000);
  }
  
 
